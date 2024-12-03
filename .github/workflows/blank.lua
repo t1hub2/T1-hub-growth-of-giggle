@@ -32,4 +32,25 @@ local Window = Rayfield:CreateWindow({
       Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
-local Tab = Window:CreateTab("Бейджы", 4483362458) -- Title, Image
+local Tab = Window:CreateTab("Приколы", 4483362458) -- Title, Image
+local Button = Tab:CreateButton({
+   Name = "Упасть во вторую версию бекрумса",
+   Callback = function()
+    Name = "Банка мочи",
+   Callback 
+    local teleportPosition = Vector3.new(10, 20, 30)  -- Укажите координаты X, Y, Z
+
+local function teleportPlayer(player)
+    -- Проверяем, есть ли персонаж и HumanoidRootPart у игрока
+    local character = player.Character
+    if character and character:FindFirstChild("HumanoidRootPart") then
+        character.HumanoidRootPart.CFrame = CFrame.new(teleportPosition)
+    end
+end
+
+-- Пример: телепортируем локального игрока
+local player = game.Players.LocalPlayer
+teleportPlayer(player)
+
+   end,
+})
